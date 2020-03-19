@@ -1,0 +1,13 @@
+Package: actigrapyfunctions
+Title: Functions for processing HBA actigraphy data
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Jonathon",
+           family = "Pye",
+           role = c("aut", "cre"),
+           email = "jonathon.pye@sydney.edu.au")
+Description: Contains functions used for processing HBA actigraphy data. For package dependencies refer to https://rpubs.com/Jonathon_Pye 
+License: OpenSource
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.0.9000
