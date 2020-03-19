@@ -12,7 +12,7 @@
 #' process_nonparametric()
 
 
-process_nonparametric <- function(files, filename) {
+process_nonparametric <- function(files) {
   for (filename in files) {
     # Read data:
     data <- read.csv(filename, header = T, sep = ",")
