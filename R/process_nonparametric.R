@@ -13,6 +13,9 @@
 
 
 process_nonparametric <- function(files) {
+  if (!require("pacman")) install.packages("pacman")
+  pacman::p_load(nparact, tidyverse, lubridate)
+  
   for (filename in files) {
     # Read data:
     data <- read.csv(filename, header = T, sep = ",")
