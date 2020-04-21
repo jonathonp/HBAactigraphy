@@ -14,7 +14,11 @@
 
 process_nonparametric <- function(files = files) {
   if (!require("pacman")) install.packages("pacman")
-  pacman::p_load(nparact, tidyverse, lubridate)
+  pacman::p_load(nparACT, tidyverse, lubridate)
+  
+  library(nparACT)
+  library(tidyverse)
+  library(lubridate)
   
   for (filename in files) {
     # Read data:
