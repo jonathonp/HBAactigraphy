@@ -25,11 +25,11 @@ process_nonparametric <- function(files = files) {
     data <- read.csv(filename, header = T, sep = ",")
 
     # Create data.frame for nparACT:
-    data$npar_time <- parse_date_time(data$Time, '%I:%M:%S %p')
+    data$npar_time <- lubridate::parse_date_time(data$Time, '%I:%M:%S %p')
     npar <- data.frame(data$npar_time, data$data.Activity)
 
     # nparact function:
-    npar_output <- nparACT_base("npar", 2/60, cutoff = 1, plot = F, fulldays = F)
+    npar_output <- nparACT::nparACT_base("npar", 2/60, cutoff = 1, plot = F, fulldays = F)
 
     # Write new data to a new excel file:
     write.table(npar_output, "npar_Results.csv",
