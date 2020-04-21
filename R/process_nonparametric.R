@@ -25,8 +25,8 @@ process_nonparametric <- function(files = files) {
     data <- read.csv(filename, header = T, sep = ",")
 
     # Create data.frame for nparACT:
-    data$npar_time <- lubridate::parse_date_time(data$Time, '%I:%M:%S %p')
-    npar <- data.frame(data$npar_time, data$data.Activity)
+    npar_time <- lubridate::parse_date_time(data$Time, '%I:%M:%S %p')
+    npar <- data.frame(npar_time, data$data.Activity)
 
     # nparact function:
     npar_output <- nparACT::nparACT_base("npar", 2/60, cutoff = 1, plot = F, fulldays = F)
